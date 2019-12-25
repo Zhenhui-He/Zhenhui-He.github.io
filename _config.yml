@@ -1,66 +1,70 @@
-# Site settings
-title: Hanuman
-description: Hanuman is a minimal yet powerful Jekyll theme for your blogs and websites.
-cover: assets/images/radhakrishna.jpg
-logo: assets/images/logo.png
-favicon: assets/images/favicon.png
-baseurl: "/hanuman/" # the subpath of your site, e.g. /blog/ or / for root
-url: "https://samanyougarg.com" # the base hostname & protocol for your site
+# Configurations
+markdown: kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+highlighter: pygments
 
-pagination:
+# Needed for backward compatibility
+gems: [jekyll-paginate]
 
-  # Site-wide kill switch, disabled here it doesn't run at all 
-  enabled: true
+# Permalinks
+permalink:        /blog/:year/:month/:day/:title
 
-  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
-  debug: false
+# Setup
+title:            'Jekyll Metro'
+tagline:          'A Metro theme for Jekyll'
+description:      'A Sample blog using Jekyll Metro'
+url:              'http://192.168.1.11:4000'
+baseurl:          ''
 
-  per_page: 5
+# Navigation
+navigation:
+- text: About
+  url: /about/
+- text: Resume
+  url: /resume/
+- text: Blog
+  url: /blog/
+- text: Tags
+  url: /tags/
+- text: Archive
+  url : /archive/
+- text: Search
+  url: /search/
 
-# Social
-facebook: facebook
-twitter: twitter
-github:  github
 
-#Additional Pages
-about: about
-contact: contact
-privacy-policy: privacy-policy
+# Author Details
+author:         'Abdel Raoof Olakara'
 
-
-permalink: /:title
-
+#Social Media links (Use complete URL except for email)
+dribbble:
+email:
+facebook:       'https://www.facebook.com/olakara'
+flickr:
+github:         'https://github.com/olakara'
+gplus:          'https://plus.google.com/100425464897246255887/'
+instagram:
+pinterest:
+linkedin:       'https://ae.linkedin.com/in/olakara/'
+rss:
+stackoverflow:  'http://stackoverflow.com/users/185655/abdel-raoof'
+twitter:        'https://twitter.com/olakara'
 
 # Google Analytics
-analytics_id: ""
+gahandler: 'UA-52149651-1'
 
-# Build settings
-markdown: kramdown
+#if footersvg is 'true' the social media links will be shown top on the copy right in the footer
+footersvg: 'true'
 
-kramdown:
-  parse_block_html: true
+# Disqus
+disqushandler: 'testingblogo'
 
-plugins:
-  - jekyll-paginate-v2
+# txtpen
+txtpenhandler: 'testingblogo'
 
+# Blog Configurations
+paginate: 10 # Posts per page on the blog index
+paginate_path: '/blog/page:num'
+destination: ./_site
 
-# Settings for rake task
-safe: False
-lsi: False
-username: samanyougarg #github username
-repo: hanuman #github repository
-branch: master #branch
-relative_source: ../hanuman/ #source directory
-destination: ../hanuman-pages/ #destination directory
-production_url:  https://samanyougarg.com/
-source_url:  https://github.com/samanyougarg/hanuman #source repository url
-
-exclude:
-  - README.md
-  - Rakefile
-  - Gemfile
-  - Gemfile.lock
-  - changelog.md
-  - "*.Rmd"
-  - vendor
-  - .travis.yml
+# Custom vars
+version:          0.9x beta 2
